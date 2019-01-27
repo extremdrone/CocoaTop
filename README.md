@@ -6,20 +6,15 @@ I'm releasing the source code for everyone to improve. The license is GPL-3, exc
 * @DylanDuff3 (http://twitter.com/dylanduff3) who created the icon.
 * Domo (https://github.com/D0m0/), who is the original author.
 
-The main challenge is porting the code to modern iOS SDKs by replacing deprecated methods with new ones. This is actually a lot of work, and I don't have the time to do it on my own.
+# TODO:
 
-If you are willing to port CocoaTop to iOS 10, 11, 12, etc., please bear in mind the following:
-* It would be a good idea to build for arm64 platform. The code is already adapted, you need to set "ARCHS = arm64" in the Makefile.
-* Feel free to remove support for old iOSes (5, 6, 7, 8, etc...)
-* http://twitter.com/dylanduff3
+* Add a how-to for searching in specific columns.
+* Put object counters (how many threads/handles/ports etc.) in the popup menu.
+* Color-coding (highlighting) values by their magnitude (like Windows Task manager).
+* Add nice graphs!
+* Smooth row transitions. This is hard.
 
-To build CocoaTop you need:
-* Theos (https://github.com/theos/theos), make sure $(THEOS) environment variable points to it.
-* Appe iOS SDK (currently version 7.0 is used). Download it from Apple and unpack to theos\sdks\. Also look here: https://github.com/theos/sdks/
-* make!
-
-Other build commands:
-* *make package* - create a Cydia .deb package.
-* *make TARGET=iphone:clang:5.0 SCHEMA=five* - build for iOS 5.
-* *make TARGET=iphone:clang:6.0 SCHEMA=six* - build for iOS 6.
-* *make install THEOS_DEVICE_IP=192.168.1.222 THEOS_DEVICE_PORT=22* - install package .deb to device using SSH.
+# Maybe also:
+* Color-coding different processes by their type: app, service, 32-bit, zombie/stuck...
+* Smooth transition during orientation change.
+* Tap file to view. Useful for logs.
